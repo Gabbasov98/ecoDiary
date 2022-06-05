@@ -7,6 +7,9 @@
 
 .research {
     .lesson {
+        &__title {
+            margin-left: 0;
+        }
         &__nav {
             flex-wrap: nowrap;
             justify-content: space-between;
