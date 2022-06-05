@@ -1,0 +1,18 @@
+@import "vars";
+.lesson-field {
+    min-height: 500px;
+    flex-grow: 1;
+    padding: 54px 60px;
+}
+
+.research {
+    .lesson {
+        &__nav {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        &__next {
+            margin: 0;
+        }
+    }
+}

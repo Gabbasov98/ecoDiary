@@ -1,0 +1,59 @@
+@import "../vars";
+.display1 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 93.19%;
+}
+
+.display3 {
+    font-size: 36px;
+    line-height: 120%;
+}
+
+.green-text {
+    color: $green;
+}
+
+.blue-text {
+    color: $primary;
+}
+
+.yellow-text {
+    color: #C6922C;
+}
+
+.red-text {
+    color: #C6302C;
+}
+
+ol {
+    counter-reset: num;
+    padding: 0;
+    li {
+        text-indent: 26px;
+        font-size: 24px;
+        line-height: 120%;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:before {
+            content: counter(num) ".";
+            counter-increment: num;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .display1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .display1 {
+        font-size: 40px;
+    }
+    .display3 {
+        font-size: 30px;
+    }
+}
