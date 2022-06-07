@@ -70,6 +70,9 @@
     padding: 44px 0;
     overflow: hidden;
     position: relative;
+    background-image: url(../img/blue.webp), url(../img/green.webp);
+    background-repeat: no-repeat;
+    background-position: left -200px bottom 100px, right -230px top 100px;
     &__img {
         position: absolute;
     }
@@ -236,6 +239,7 @@
         }
     }
     .story {
+        background-image: none;
         &__desc {
             height: unset;
             background-image: none;

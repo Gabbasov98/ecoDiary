@@ -1,6 +1,9 @@
 @import "vars";
 .lessons {
     padding: 50px 0;
+    background-image: url(../img/orange.webp), url(../img/pink.webp), url(../img/blue.webp), url(../img/green.webp);
+    background-repeat: no-repeat;
+    background-position: right -230px top 1700px, left -200px top 1900px, left -200px top 700px, right -230px top 500px;
     &__title {
         text-align: center;
         color: #6099EE;
@@ -457,6 +460,27 @@
     }
 }
 
+.fact {
+    padding: 30px 75px 30px 110px;
+    background: #FEFFBF;
+    display: flex;
+    align-items: center;
+    &__text {
+        margin: 0 30px 0 115px;
+        font-size: 32px;
+        line-height: 150%;
+        max-width: 540px;
+    }
+    &__img {
+        width: 250px;
+        flex-shrink: 0;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
 .detective {
     padding-bottom: 42px;
     &__top {
@@ -625,6 +649,13 @@
             padding: 30px 65px 45px;
         }
     }
+    .fact {
+        padding: 30px 65px;
+        &__text {
+            margin: 0 40px;
+            font-size: 24px;
+        }
+    }
     .lesson-nav {
         &__inner {
             gap: 25px;
@@ -651,8 +682,33 @@
 }
 
 @media screen and (max-width: 992px) {
+    .lessons {
+        background-image: none;
+    }
     .lesson-top {
-        display: none;
+        &__inner {
+            flex-wrap: wrap;
+            height: unset;
+            padding-bottom: 15px;
+            width: calc(100% + 60px);
+            margin-left: -30px;
+        }
+        &__back {
+            position: static;
+            transform: unset;
+            width: 100%;
+            height: 66px;
+            background: #E0F0FF;
+            margin: 0 0 15px 0;
+            padding: 0 30px;
+            font-size: 20px;
+            svg {
+                margin-right: 24px;
+            }
+        }
+        &__title {
+            font-size: 32px;
+        }
     }
     .lesson {
         background-image: none !important;
@@ -746,6 +802,18 @@
             img {
                 display: none !important;
             }
+        }
+    }
+    .fact {
+        flex-direction: column;
+        padding: 20px;
+        &__text {
+            margin: 26px 0;
+            text-align: center;
+        }
+        &__img {
+            width: 312px;
+            max-width: 100%;
         }
     }
     .detective {
