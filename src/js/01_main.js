@@ -1,4 +1,7 @@
-function storySlider() {
+function storySlider(init) {
+    if (!init) {
+        return
+    }
     var swiper = new Swiper('.story .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -14,12 +17,16 @@ $(document).ready(function() {
     $('input[type="tel"]').mask('+7 999 999-9999', { placeholder: '+7             ' });
 
     if (window.innerWidth < 768) {
-        storySlider()
+        storySlider(true)
+    } else {
+        storySlider(false)
     }
 
     $(window).resize(function() {
         if (window.innerWidth < 768) {
-            storySlider()
+            storySlider(true)
+        } else {
+            storySlider(false)
         }
     })
 
