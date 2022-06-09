@@ -5,6 +5,7 @@ function storySlider(init) {
     var swiper = new Swiper('.story .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 0,
+        loop: true,
         pagination: {
             el: '.story .swiper-pagination',
             type: 'bullets',
