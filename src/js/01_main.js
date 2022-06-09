@@ -1,36 +1,42 @@
-function storySlider(init) {
-    if (!init) {
-        return
-    }
+function storySlider() {
+    // if (!init) {
+    //     return
+    // }
     var swiper = new Swiper('.story .swiper-container', {
         slidesPerView: "auto",
         spaceBetween: 0,
-        loop: true,
+        // loop: true,
         pagination: {
             el: '.story .swiper-pagination',
             type: 'bullets',
             clickable: true,
         },
+        breakpoints: {
+            320: {
+                allowTouchMove: true
+            },
+            768: {
+                allowTouchMove: false
+            },
+        }
     })
 }
 
 
 $(document).ready(function() {
     $('input[type="tel"]').mask('+7 999 999-9999', { placeholder: '+7             ' });
+    storySlider()
+        // if (window.innerWidth < 768) {
+        //     storySlider()
+        // }
 
-    if (window.innerWidth < 768) {
-        storySlider(true)
-    } else {
-        storySlider(false)
-    }
-
-    $(window).resize(function() {
-        if (window.innerWidth < 768) {
-            storySlider(true)
-        } else {
-            storySlider(false)
-        }
-    })
+    // $(window).resize(function() {
+    //     if (window.innerWidth < 768) {
+    //         storySlider(true)
+    //     } else {
+    //         storySlider(false)
+    //     }
+    // })
 
     $(".header__burger").click(function() {
         $(this).toggleClass("header__burger--active")
