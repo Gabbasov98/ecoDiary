@@ -46,11 +46,13 @@
 
 .nav {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    // margin-top: -5px;
     &__link {
+        margin-top: 10px;
         font-weight: 700;
         font-size: 24px;
         padding: 0 27px;
@@ -125,8 +127,12 @@
             height: 100vh;
             background: #FFFFFF;
             flex-direction: column;
+            flex-wrap: unset;
+            // display: block;
             padding-bottom: 40px;
             transition: all .225s;
+            overflow-y: auto;
+            overflow-x: hidden;
             &--active {
                 left: 0;
             }

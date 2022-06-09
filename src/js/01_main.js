@@ -4,7 +4,7 @@ function storySlider(init) {
     }
     var swiper = new Swiper('.story .swiper-container', {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 0,
         pagination: {
             el: '.story .swiper-pagination',
             type: 'bullets',
@@ -33,6 +33,7 @@ $(document).ready(function() {
     $(".header__burger").click(function() {
         $(this).toggleClass("header__burger--active")
         $(".header__mob").toggleClass("header__mob--active")
+        $("body").toggleClass("fixed-body")
     })
 
     $(".train__answer").click(function() {
