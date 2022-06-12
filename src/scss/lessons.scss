@@ -1007,6 +1007,16 @@
             padding: 0 15px;
         }
     }
+    .train {
+        &__desc {
+            padding: 20px;
+            &-title {
+                padding: 0 30px;
+                height: 55px;
+                font-size: 27px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 450px) {
