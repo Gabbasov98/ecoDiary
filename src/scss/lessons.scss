@@ -546,6 +546,31 @@
             color: #3E3E3E;
         }
     }
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+        margin-top: 31px;
+        width: 100%;
+        padding: 0 35px;
+        &-item {
+            background: #F7FBFF;
+            border: 2px solid #B4D1FF;
+            border-radius: 10px;
+            padding: 26px 34px;
+        }
+        &-title {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 24px;
+            color: #1874D3;
+        }
+        &-desc {
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 8px;
+        }
+    }
 }
 
 .additional {
@@ -828,7 +853,7 @@
     }
     .detective {
         &__top {
-            padding: 18px 18px 73px;
+            padding: 18px 18px 21px;
         }
         &__steps {
             border-width: 3px;
@@ -846,6 +871,14 @@
             }
             &-text {
                 margin-top: 50px;
+            }
+        }
+        &__info {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 0;
+            &-item {
+                padding: 23px;
             }
         }
     }

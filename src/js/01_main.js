@@ -26,17 +26,7 @@ function storySlider() {
 $(document).ready(function() {
     $('input[type="tel"]').mask('+7 999 999-9999', { placeholder: '+7             ' });
     storySlider()
-        // if (window.innerWidth < 768) {
-        //     storySlider()
-        // }
 
-    // $(window).resize(function() {
-    //     if (window.innerWidth < 768) {
-    //         storySlider(true)
-    //     } else {
-    //         storySlider(false)
-    //     }
-    // })
 
     $(".header__burger").click(function() {
         $(this).toggleClass("header__burger--active")
@@ -49,12 +39,18 @@ $(document).ready(function() {
 
         if (answerTrue === "true") {
             $(this).addClass("train__answer--true")
+            $(".train__desc").slideDown()
         } else {
             $(this).addClass("train__answer--false")
+            setTimeout(() => {
+                $(this).removeClass("train__answer--false")
+                $(".train__answers").removeClass("train__answers--disabled")
+            }, 2000);
         }
 
         $(".train__answers").addClass("train__answers--disabled")
-        $(".train__desc").slideDown()
+
+
     })
 
     $(".quiz__answer").click(function() {
@@ -64,6 +60,10 @@ $(document).ready(function() {
             $(this).addClass("quiz__answer--true")
         } else {
             $(this).addClass("quiz__answer--false")
+            setTimeout(() => {
+                $(this).removeClass("quiz__answer--false")
+                $(".quiz__answers").removeClass("quiz__answers--disabled")
+            }, 2000);
         }
 
         $(".quiz__answers").addClass("quiz__answers--disabled")
